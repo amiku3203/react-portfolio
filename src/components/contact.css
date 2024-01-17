@@ -1,0 +1,101 @@
+ /* Container styling for the Contact component */
+.container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+  background-color: blue; /* Add your desired background color */
+}
+
+/* Styling for the contact options section */
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Styling for each contact option */
+.contact__option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+/* Hover effect for contact options */
+.contact__option:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+/* Styling for contact option icons */
+.contact__option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Styling for contact option links */
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+/* Styling for the form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Styling for input and textarea in the form */
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-white);
+}
+
+/* Media queries for responsive design */
+
+/* For desktop view */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* For tablet view */
+@media screen and (max-width: 768px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact__options {
+    justify-content: center; /* Center the contact options on smaller screens */
+  }
+}
+
+/* For mobile view */
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: 80%; /* Adjust width for smaller screens */
+    gap: 1rem;
+  }
+
+  .contact__options {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .contact__option {
+    grid-column: 1; /* Ensure the options occupy the full width */
+  }
+}
